@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>自动写小说阅读器</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="app">
+      <header class="app__header">
+        <h1>自动写小说阅读器</h1>
+        <p>输入题材与主角，点击按钮即可边生成边阅读。</p>
+      </header>
+
+      <section class="panel">
+        <label>
+          小说题材
+          <input id="genre" type="text" value="仙侠" />
+        </label>
+        <label>
+          主角名字
+          <input id="protagonist" type="text" value="林越" />
+        </label>
+        <label>
+          章节长度（句）
+          <input id="length" type="number" min="3" max="12" value="6" />
+        </label>
+        <div class="actions">
+          <button id="generateBtn">生成下一章</button>
+          <button id="autoBtn">自动续写：关闭</button>
+          <button id="resetBtn" class="secondary">清空</button>
+        </div>
+      </section>
+
+      <section class="reader" id="reader" aria-live="polite">
+        <p class="placeholder">点击「生成下一章」开始阅读。</p>
+      </section>
+    </main>
+
+    <template id="chapterTemplate">
+      <article class="chapter">
+        <h2></h2>
+        <p></p>
+      </article>
+    </template>
+
+    <script src="app.js"></script>
+  </body>
+</html>
