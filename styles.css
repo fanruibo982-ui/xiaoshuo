@@ -1,0 +1,113 @@
+:root {
+  color-scheme: light;
+  --bg: #f4f6fb;
+  --card: #ffffff;
+  --text: #1f2937;
+  --muted: #6b7280;
+  --primary: #4f46e5;
+  --primary-strong: #4338ca;
+  --line: #dbe2f2;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "PingFang SC", "Microsoft YaHei", sans-serif;
+  color: var(--text);
+  background: linear-gradient(180deg, #eef2ff, var(--bg));
+}
+
+.app {
+  width: min(920px, 100% - 2rem);
+  margin: 2rem auto 3rem;
+}
+
+.app__header h1 {
+  margin-bottom: 0.5rem;
+}
+
+.app__header p {
+  margin-top: 0;
+  color: var(--muted);
+}
+
+.panel,
+.reader {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  padding: 1rem;
+  box-shadow: 0 8px 20px rgba(30, 41, 59, 0.08);
+}
+
+.panel {
+  display: grid;
+  gap: 0.8rem;
+}
+
+label {
+  font-size: 0.95rem;
+  display: grid;
+  gap: 0.4rem;
+}
+
+input {
+  border: 1px solid #c6d1f5;
+  border-radius: 10px;
+  padding: 0.6rem 0.75rem;
+  font-size: 1rem;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+
+button {
+  border: none;
+  border-radius: 10px;
+  padding: 0.6rem 0.9rem;
+  font-size: 0.95rem;
+  cursor: pointer;
+  background: var(--primary);
+  color: #fff;
+}
+
+button:hover {
+  background: var(--primary-strong);
+}
+
+button.secondary {
+  background: #e5e7eb;
+  color: #111827;
+}
+
+.reader {
+  margin-top: 1rem;
+  min-height: 250px;
+}
+
+.placeholder {
+  color: var(--muted);
+}
+
+.chapter + .chapter {
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px dashed var(--line);
+}
+
+.chapter h2 {
+  margin: 0;
+  color: #312e81;
+}
+
+.chapter p {
+  margin: 0.5rem 0 0;
+  line-height: 1.8;
+  white-space: pre-wrap;
+}
